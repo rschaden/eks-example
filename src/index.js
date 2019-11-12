@@ -6,7 +6,7 @@ phin({
 	'parse': 'json'
 })
 .then(metadata => {
-  const AWS_REGION = metadata.body.region;
+  const AWS_REGION = 'eu-central-1';
 
   const AWSXRay = require('aws-xray-sdk');
   AWSXRay.setDaemonAddress(process.env.XRAY_DAEMON_ADDR || 'localhost:2000');
